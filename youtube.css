@@ -1,0 +1,142 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+header{
+  display:flex;
+  
+  
+
+}
+.left-section{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width:225px;
+}
+.left-section img{
+  width:120px;
+}
+.middle-section{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex:1;
+}
+.middle-section .search-bar{
+  width:80%;
+  border-radius:215px 0px 0px 215px;
+  padding:0px 4px 0px 16px;
+  height:40px;
+  border:none;
+  border:1px solid rgb(224, 224, 224);;
+}
+.middle-section .fa-search{
+ padding:11px 20px;
+ border-radius:0px 215px 215px 0px;
+ border:1px solid rgb(224, 224, 224);
+ background-color: #f8f8f8;
+ color:gray;
+}
+.middle-section .fa-microphone{
+font-size:20px;
+border:1px solid rgb(236, 236, 236);
+display:flex;
+align-items:center;
+justify-content:center;
+padding:10px 12px;
+border-radius: 50%;
+background-color: rgb(236, 236, 236);
+margin-left:10px;;
+}
+.right-section{
+  width:225px;
+  display:flex;
+  align-items: center;
+  justify-content:space-evenly;
+  flex-shrink: 0;
+}
+.right-section img{
+  width:32px;
+  border-radius:16px;
+ 
+}
+.sidebar-container{
+  display:flex;
+  flex-direction: column;
+  position: fixed;
+  top:70px;
+  bottom:0;
+  justify-content:flex-start;
+  align-items: center;
+}
+.sidebar-box{
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-top: 40px;
+padding-left: 7px;
+}
+.fa-home{
+  font-size: 20px;
+}
+.sidebar-box p{
+  font-size: 10px;
+  color:rgb(15, 15, 15);
+  text-align: center;
+}
+.sidebar-container .sidebar-box img{
+  width:18px;
+}
+.sidebar-container .sidebar-box .download-img{
+  width:42px;
+}
+.options-section{
+  display:flex;
+  flex-shrink:0;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.options-box{
+  padding:4px 12px;
+  background-color:rgb(236, 236, 236);
+  color:rgb(15, 15, 15);
+  border-radius:3px;
+font-weight: 300;
+}
+.videoBx-section{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-left: 100px;
+}
+.videoBx-img img{
+ width:375.984px;
+ border-radius: 10px;
+}
+.videoBx-text{
+  display:grid;
+  grid-template-columns:12% 1fr 15%;
+  margin: 24px 0 0 0;
+}
+.channel-picture img{
+ width:36px;
+ border-radius:18px;
+}
+.video-info .video-title{
+  font-size:16px;
+  color:rgb(15, 15, 15);
+  font-weight: 500;
+  line-height: 22px;
+}
+.video-info .video-author , .video-info .video-views-duration{
+  font-size:14px;
+  color:rgb(90, 90, 90);
+  line-height: 22px;
+  font-weight: 300;
+}
+.video-info .video-views-duration{
+ vertical-align: center;
+}
