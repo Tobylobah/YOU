@@ -9,12 +9,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@200;300;400;500;600;900&family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+<script src="trail.js" defer></script>
   <title>Youtube</title>
 </head>
 <body>
   <header>
     <div class="left-section">
-      <i class="fa fa-bars" aria-hidden="true"></i>
+      <i class="fa fa-bars" aria-hidden="true" data-menu-icon-btn></i>
       <div class="left-section-img">
       <img src="img/youtube-logo.png">
       <span>NG</span>
@@ -22,20 +23,20 @@
     </div>
     <div class="middle-section">
       <input class="search-bar" type="text" placeholder="Search">
-      <i class="fa fa-search" aria-hidden="true"></i>
-      <i class="fa fa-microphone" aria-hidden="true"></i>
+      <i title="Search" class="fa fa-search" aria-hidden="true"></i>
+      <i title="Search with your voice" class="fa fa-microphone" aria-hidden="true"></i>
     </div>
     <div class="right-section">
-      <i class="fa fa-video-camera" aria-hidden="true"></i>
-      <i class="fa fa-bell-o" aria-hidden="true"></i>
+      <i title="create" class="fa fa-video-camera" aria-hidden="true"></i>
+      <i title="Notifications" class="fa fa-bell-o" aria-hidden="true"></i>
       <div class="badge">1</div>
      
       <img src="img/unnamed.jpg">
     </div>
   </header>
   <section>
-    <div class="sidebar-container">
-    <div class="sidebar-box">
+    <div class="sidebar-container" data-sidebar>
+    <div class="sidebar-box" data-sidebar-box-1>
       <div class="sidebar-icons">
         <i class="fa fa-home" aria-hidden="true"></i>
       </div>
@@ -43,7 +44,7 @@
         <p>Home</p>
       </div>
     </div>
-    <div class="sidebar-box">
+    <div class="sidebar-box" data-sidebar-box-2>
       <div class="sidebar-icons">
         <img src="img/youtube-shorts.png">
       </div>
@@ -51,15 +52,16 @@
         <p>Shorts</p>
       </div>
     </div>
-    <div class="sidebar-box">
+    <div class="sidebar-box" data-sidebar-box-3>
       <div class="sidebar-icons">
         <img src="img/youtube-subscriptions.png">
       </div>
+      
       <div class="sidebar-text">
         <p>Subscriptions</p>
       </div>
     </div>
-    <div class="sidebar-box">
+    <div class="sidebar-box" data-sidebar-box-4>
       <div class="sidebar-icons">
         <img src="img/youtube-library.png">
       </div>
@@ -67,18 +69,73 @@
         <p>Library</p>
       </div>
     </div>
-    <div class="sidebar-box">
+    <div class="sidebar-box" data-sidebar-box-5>
       <div class="sidebar-icons">
-        <img class="download-img" src="img/youtube-download.png">
+        <img width="32" height="22" src="https://img.icons8.com/windows/32/download--v1.png" alt="download--v1"/>
       </div>
       <div class="sidebar-text">
         <p>Downloads</p>
       </div>
     </div>
+    <div class="others" data-sidebar-box-6>
+     <p>Subscriptions</p>
+     <div class="subscriptions">
+        <div class="subscriptions-img">
+          <img src="img/supersimpledev.jpg">
+        </div>
+        <div class="subscriptions-text">
+          SuperSimpleDev
+        </div>
+     </div>
+
+     <div class="subscriptions">
+        <div class="subscriptions-img">
+          <img src="img/freecodecamp.jpg">
+        </div>
+        <div class="subscriptions-text">
+          Freecodecamp
+        </div>
+   </div>
+
+   <div class="subscriptions">
+    <div class="subscriptions-img">
+      <img src="img/kevin.jpg">
+    </div>
+    <div class="subscriptions-text">
+      Kevin Powell
+    </div>
+   </div>
+
+   <div class="subscriptions">
+    <div class="subscriptions-img">
+      <img src="img/netninja.jpg">
+    </div>
+    <div class="subscriptions-text">
+      Net ninja
+    </div>
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
     </div>
   </section>
+
   <section>
-    <div class="options-section">
+    <div class="options-section" option-sidebar>
       <div class="options-box active">
         All
       </div>
@@ -122,7 +179,7 @@
     </div>
   </section>
   <section>
-    <div class="videoBx-section">
+    <div class="videoBx-section" video-sidebar>
       <div class="video-Bx-container">
         <div class="videoBx-img">
           <img src="img/video-img.webp">
@@ -273,7 +330,7 @@
     </div>  
   </section>
   <section>
-    <div class="shorts-section">
+    <div class="shorts-section" shorts-sidebar>
       <div class="shorts-logo">
         <img class="shorts-logo" src="img/youtube-red-shorts.png">
         <p>Shorts</p>
@@ -344,5 +401,6 @@
       </div>
     </div>
   </section>
+  
 </body>
 </html>

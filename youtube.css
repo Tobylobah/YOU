@@ -4,7 +4,7 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
- .videoBx-section , .shorts-section{
+ .videoBx-section{
   margin-left: 100px
 }
 header{
@@ -13,8 +13,8 @@ header{
   position: fixed;
   max-width:100%;
   z-index: 300;
-  top: 0;
-  left: 0;
+  top: -17px;
+  left: -10px;
   right: 0;
 }
 .left-section{
@@ -32,12 +32,20 @@ header{
   position:absolute;
   background-color: white;
   top:19px;
-  left:165px;
+  left:185px;
   font-size:10px;
   color:rgb(90,90,90);
 }
 .left-section .fa-bars{
-  font-size: 24px;
+  font-size: 22px;
+  cursor: pointer;
+}
+.fa-bars{
+  padding: 10px;
+  border-radius: 50%;
+}
+.fa-bars:hover{
+  background-color:rgb(224, 224, 224);
 }
 .middle-section{
   display:flex;
@@ -53,6 +61,13 @@ header{
   border:none;
   border:1px solid rgb(224, 224, 224);;
 }
+.middle-section .search-bar{
+  outline: none;
+}
+.middle-section .search-bar:focus{
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 .search-bar::placeholder{
   font-size: 16px;
   font-weight: 300;
@@ -64,7 +79,10 @@ header{
  background-color: #f8f8f8;
  color:gray;
 }
-
+.middle-section .fa-search:hover{
+  background-color: rgb(224, 224, 224);
+  border:1px solid  #f8f8f8;
+}
 .middle-section .fa-microphone{
 font-size:20px;
 border:1px solid rgb(236, 236, 236);
@@ -108,18 +126,43 @@ margin-left:10px;;
   display:flex;
   flex-direction: column;
   position: fixed;
-  top:70px;
+  top:60px;
   bottom:0;
   justify-content:flex-start;
   align-items: center;
   background-color: white;
+  transition:width 200ms  ease-in-out , margin-left 200ms  ease-in-out;
+}
+.sidebar-container.open{
+  width:120px;
+  margin-left: 20px;
 }
 .sidebar-box{
 display: flex;
 flex-direction: column;
 align-items: center;
+justify-content: center;
 margin-top: 40px;
 padding-left: 7px;
+}
+.sidebar-box.open{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.sidebar-container .sidebar-box{
+   width:125%; 
+   transition:padding 200ms ease-in-out ;
+}
+.sidebar-container.open , .sidebar-box.open{
+  margin-left: 23px;
+}
+.sidebar-container .sidebar-box:hover{
+  background-color:rgb(200,200,200);
+  cursor: pointer; 
+  border-radius: 20px;
+  padding:10px;
 }
 .fa-home{
   font-size: 20px;
@@ -128,6 +171,13 @@ padding-left: 7px;
   font-size: 10px;
   color:rgb(15, 15, 15);
   text-align: center;
+}
+.sidebar-box.open p{
+  font-size: 16px;
+  color:rgb(20, 19, 19);
+  font-weight: 400;
+  text-align: center;
+  padding-left: 24px;
 }
 .sidebar-container .sidebar-box img{
   width:18px;
@@ -143,7 +193,12 @@ padding-left: 7px;
   position:absolute;
   z-index:200;
   top:90px;
-  left:60px;
+  left:75px;
+  transition:position 200ms  ease-in-out , left  200ms  ease-in-out;
+}
+.options-section.open{
+  position:absolute;
+  left:160px;
 }
 .options-box{
   padding:4px 8px;
@@ -152,7 +207,6 @@ padding-left: 7px;
   border-radius:6px;
   font-weight: 400;
   margin-left: 30px;
- 
 }
 .active{
   background-color: black;
@@ -161,9 +215,19 @@ padding-left: 7px;
 }
 .videoBx-section{
   display:grid;
-  grid-template-columns: 1fr 1fr 1fr;;
-  margin-top: 140px;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 120px;
   position: relative;
+  transition: margin-left  200ms  ease-in-out;
+}
+.videoBx-section.open {
+  margin-left: 190px;
+}
+.shorts-section{
+  margin-left: 100px;
+}
+.shorts-section.open{
+  margin-left: 190px;
 }
 .video-Bx-container{
   margin-top:30px;
@@ -230,4 +294,34 @@ padding-left: 7px;
 .shorts-container .shorts-box img{
   width:219px;
   border-radius: 8px;
+}
+.others{
+  display: none;
+}
+.others.open{
+  display:block;
+}
+.others p{
+  padding-left: 40px;
+  padding-top: 40px;
+  font-weight: 700;
+}
+.subscriptions{
+  display:flex;
+  align-items: center;
+  padding-left: 15px;
+  padding-top: 10px;
+}
+.subscriptions .subscriptions-img img{
+  width:46px;
+  border-radius: 23px;
+  padding-right: 10px;
+}
+.subscriptions .subscriptions-text{
+
+}
+@media(max-width:1024px){
+  .video-Bx-container , .shorts-box{
+    margin-right: 10px;
+  }
 }
